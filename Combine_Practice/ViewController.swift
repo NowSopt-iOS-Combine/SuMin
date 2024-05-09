@@ -83,9 +83,6 @@ class ViewController: UIViewController {
         //button.addTarget(self, action: #selector(loginButtonDidTap), for: .touchUpInside)
         return button
     }()
-
-
-
 }
 
 extension UITextField{
