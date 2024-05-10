@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		740CF37F2BE480DA007EE949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CF37E2BE480DA007EE949 /* AppDelegate.swift */; };
 		740CF3812BE480DA007EE949 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CF3802BE480DA007EE949 /* SceneDelegate.swift */; };
-		740CF3832BE480DA007EE949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CF3822BE480DA007EE949 /* ViewController.swift */; };
 		740CF3862BE480DA007EE949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740CF3842BE480DA007EE949 /* Main.storyboard */; };
 		740CF3882BE480DC007EE949 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 740CF3872BE480DC007EE949 /* Assets.xcassets */; };
 		740CF38B2BE480DC007EE949 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 740CF3892BE480DC007EE949 /* LaunchScreen.storyboard */; };
 		740CF3942BE481AD007EE949 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 740CF3932BE481AD007EE949 /* SnapKit */; };
 		740CF3962BE481AD007EE949 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 740CF3952BE481AD007EE949 /* SnapKit-Dynamic */; };
-		740CF3982BE48996007EE949 /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740CF3972BE48996007EE949 /* MyViewModel.swift */; };
 		743881242BED8F2600CADB65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881232BED8F2600CADB65 /* LoginView.swift */; };
 		743881262BED8F3C00CADB65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881252BED8F3C00CADB65 /* LoginViewController.swift */; };
 		743881282BED8F6600CADB65 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881272BED8F6600CADB65 /* LoginViewModel.swift */; };
@@ -26,12 +24,10 @@
 		740CF37B2BE480DA007EE949 /* Combine_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Combine_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		740CF37E2BE480DA007EE949 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		740CF3802BE480DA007EE949 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		740CF3822BE480DA007EE949 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		740CF3852BE480DA007EE949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		740CF3872BE480DC007EE949 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		740CF38A2BE480DC007EE949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		740CF38C2BE480DC007EE949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		740CF3972BE48996007EE949 /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
 		743881232BED8F2600CADB65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		743881252BED8F3C00CADB65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		743881272BED8F6600CADB65 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -72,9 +68,7 @@
 			children = (
 				740CF37E2BE480DA007EE949 /* AppDelegate.swift */,
 				740CF3802BE480DA007EE949 /* SceneDelegate.swift */,
-				740CF3822BE480DA007EE949 /* ViewController.swift */,
 				743881222BED8E9100CADB65 /* Login */,
-				740CF3972BE48996007EE949 /* MyViewModel.swift */,
 				740CF3842BE480DA007EE949 /* Main.storyboard */,
 				740CF3872BE480DC007EE949 /* Assets.xcassets */,
 				740CF3892BE480DC007EE949 /* LaunchScreen.storyboard */,
@@ -174,9 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				743881262BED8F3C00CADB65 /* LoginViewController.swift in Sources */,
-				740CF3832BE480DA007EE949 /* ViewController.swift in Sources */,
 				740CF37F2BE480DA007EE949 /* AppDelegate.swift in Sources */,
-				740CF3982BE48996007EE949 /* MyViewModel.swift in Sources */,
 				743881242BED8F2600CADB65 /* LoginView.swift in Sources */,
 				740CF3812BE480DA007EE949 /* SceneDelegate.swift in Sources */,
 				743881282BED8F6600CADB65 /* LoginViewModel.swift in Sources */,
