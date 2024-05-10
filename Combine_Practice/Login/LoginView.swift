@@ -22,7 +22,7 @@ final class LoginView: UIView {
     }
     
     private func setLayout() {
-        [titleLabel, idTextField, passwordTextField, loginButton].forEach {
+        [titleLabel, idTextField, passwordTextField, passwordConfirmTextField, loginButton].forEach {
             self.addSubview($0)
         }
         
@@ -45,8 +45,14 @@ final class LoginView: UIView {
             $0.height.equalTo(52)
         }
         
+        passwordConfirmTextField.snp.makeConstraints {
+            $0.top.equalTo(passwordTextField.snp.bottom).offset(7)
+            $0.horizontalEdges.equalTo(idTextField)
+            $0.height.equalTo(52)
+        }
+        
         loginButton.snp.makeConstraints {
-            $0.top.equalTo(passwordTextField.snp.bottom).offset(35)
+            $0.top.equalTo(passwordConfirmTextField.snp.bottom).offset(35)
             $0.horizontalEdges.equalTo(idTextField)
             $0.height.equalTo(58)
         }
@@ -62,7 +68,7 @@ final class LoginView: UIView {
         return label
     }()
     
-    private let idTextField: UITextField = {
+    lazy var idTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "아이디를 입력해주세요"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
@@ -70,9 +76,17 @@ final class LoginView: UIView {
         return textField
     }()
     
-    private let passwordTextField: UITextField = {
+    lazy var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "비밀번호를 입력해주세요"
+        textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
+        textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
+        return textField
+    }()
+    
+    lazy var passwordConfirmTextField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "비밀번호 확인"
         textField.font = UIFont(name: "Pretendard-SemiBold", size: 14)
         textField.backgroundColor = UIColor(red: 221/255, green: 222/255, blue: 227/255, alpha: 1)
         return textField
@@ -86,4 +100,18 @@ final class LoginView: UIView {
         button.titleLabel?.font = UIFont(name: "Pretendard-Bold", size: 18)
         return button
     }()
+}
+
+extension UIButton{
+    var isValid: Bool{
+        get{
+            backgroundColor == .yellow
+        }
+        set{
+            backgroundColor = newValue ? .yellow : .lightGray
+            isEnabled = newValue
+            setTitleColor(newValue ? .blue : .white, for: .normal)
+        }
+    }
+    
 }

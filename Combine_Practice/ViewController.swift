@@ -97,6 +97,7 @@ extension UITextField{
     } //myTextPublisher : 자료형이 AnyPublisher인 클로저
 }
 
+/*
 extension UIButton{
     var isValid: Bool{
         get{
@@ -110,3 +111,4 @@ extension UIButton{
     }
     
 }
+*/
