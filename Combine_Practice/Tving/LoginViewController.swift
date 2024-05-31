@@ -257,9 +257,9 @@ class LoginViewController: UIViewController {
         let vc = NicknameViewController()
         setSheetLayout(for: vc)
         vc.nicknamePublisher
-            .receive(on: RunLoop.main)
+            .receive(on: RunLoop.main) //메인 스레드에서 받기
             .sink { [weak self] nickname in
-                self?.nicknameLabel.text = nickname
+                self?.nicknameLabel.text = nickname //값 띄우기
             }
             .store(in: &cancellables)
         present(vc, animated: true, completion: nil)

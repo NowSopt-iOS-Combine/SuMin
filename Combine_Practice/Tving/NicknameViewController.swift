@@ -13,6 +13,7 @@ import CombineCocoa
 
 class NicknameViewController: UIViewController, UITextFieldDelegate{
     var nicknamePublisher = PassthroughSubject<String?, Never>()
+    // Publisher 선언 / PassthroughSubject : 값을 실시간으로 방송 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +81,7 @@ class NicknameViewController: UIViewController, UITextFieldDelegate{
         finishButton.isEnabled = isValid
         finishButton.backgroundColor = isValid ? UIColor(named: "BrandColor") : .white
         finishButton.layer.borderWidth = isValid ? 0 : 1
-        nicknamePublisher.send(text)
+        nicknamePublisher.send(text) //텍스트가 바뀔 때마다 (textFieldDidChangeSelection) Publisher을 통해 text를 보낸다
     }
     
     lazy var finishButton: UIButton = {
@@ -99,6 +100,7 @@ class NicknameViewController: UIViewController, UITextFieldDelegate{
     
     @objc func finishButtonTapped(){
         nicknamePublisher.send(completion: .finished)
+        // 저장 버튼 누르면 전송 종료
         self.dismiss(animated: true)
     }
 }
