@@ -8,9 +8,12 @@
 import UIKit
 
 import SnapKit
+import Combine
+import CombineCocoa
 
-class LoginViewController: UIViewController, SendNicknameProtocol{
+class LoginViewController: UIViewController {
     var nickname : String?
+    private var cancellables = Set<AnyCancellable>()
     
     func didEnterNickname(_ nickname: String?) {
         self.nickname = nickname
@@ -25,7 +28,7 @@ class LoginViewController: UIViewController, SendNicknameProtocol{
     }
 
     private func setupLayout(){
-        [titleLabel, idTextField, clearIdButton, pwTextField, showPasswordButton, clearPasswordButton, loginButton, findIdLabel, findPwLabel, noAccountLabel, nicknameButton].forEach{
+        [titleLabel, idTextField, clearIdButton, pwTextField, showPasswordButton, clearPasswordButton, loginButton, findIdLabel, findPwLabel, noAccountLabel, nicknameButton, nicknameLabel].forEach{
             view.addSubview($0)
         }
         titleLabel.snp.makeConstraints{
@@ -89,6 +92,10 @@ class LoginViewController: UIViewController, SendNicknameProtocol{
             $0.height.equalTo(22)
             $0.top.equalTo(findIdLabel.snp.top).offset(50)
             $0.leading.equalTo(noAccountLabel.snp.leading).offset(146)
+        }
+        nicknameLabel.snp.makeConstraints{
+            $0.top.equalTo(findIdLabel.snp.top)
+            $0.centerX.equalToSuperview()
         }
     }
     
@@ -225,7 +232,7 @@ class LoginViewController: UIViewController, SendNicknameProtocol{
         let label = UILabel()
         label.text = "아직 계정이 없으신가요?"
         label.font = UIFont(name: "Pretendard-SemiBold", size: 14)
-        label.textColor = UIColor(named: "gray3")
+        label.textColor = UIColor(named: "gray2")
         return label
     }()
     
@@ -239,10 +246,22 @@ class LoginViewController: UIViewController, SendNicknameProtocol{
         return button
     }()
     
+    lazy var nicknameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Pretendard-SemiBold", size: 50)
+        label.textColor = UIColor(named: "gray2")
+        return label
+    }()
+    
     @objc func nicknameButtonTapped(){
         let vc = NicknameViewController()
         setSheetLayout(for: vc)
-        vc.delegate = self
+        vc.nicknamePublisher
+            .receive(on: RunLoop.main)
+            .sink { [weak self] nickname in
+                self?.nicknameLabel.text = nickname
+            }
+            .store(in: &cancellables)
         present(vc, animated: true, completion: nil)
     }
     

@@ -8,13 +8,11 @@
 import UIKit
 
 import SnapKit
-
-protocol SendNicknameProtocol: AnyObject {
-    func didEnterNickname(_ nickname: String?)
-}
+import Combine
+import CombineCocoa
 
 class NicknameViewController: UIViewController, UITextFieldDelegate{
-    weak var delegate: SendNicknameProtocol?
+    var nicknamePublisher = PassthroughSubject<String?, Never>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +80,7 @@ class NicknameViewController: UIViewController, UITextFieldDelegate{
         finishButton.isEnabled = isValid
         finishButton.backgroundColor = isValid ? UIColor(named: "BrandColor") : .white
         finishButton.layer.borderWidth = isValid ? 0 : 1
-        
+        nicknamePublisher.send(text)
     }
     
     lazy var finishButton: UIButton = {
@@ -100,11 +98,9 @@ class NicknameViewController: UIViewController, UITextFieldDelegate{
     }()
     
     @objc func finishButtonTapped(){
-        delegate?.didEnterNickname(nicknameTextField.text)
+        nicknamePublisher.send(completion: .finished)
         self.dismiss(animated: true)
     }
-    
-
 }
 
 
