@@ -17,11 +17,11 @@ class LoginViewModel {
         let passwordConfirmTextField: AnyPublisher<String?, Never>
     }
   
-    struct Output {
+    struct ConfirmPasswordOutput {
         let isValidPassword: AnyPublisher<Bool, Never>
     }
     
-    func confirmPassword(from input: Input) -> Output {
+    func confirmPassword(from input: Input) -> ConfirmPasswordOutput {
         let passwordPublisher = input.passwordTextField
         let passwordConfirmPublisher = input.passwordConfirmTextField
         
@@ -40,6 +40,28 @@ class LoginViewModel {
             })
             .eraseToAnyPublisher()
 
-        return Output(isValidPassword: confirmPasswordPublisher)
+        return ConfirmPasswordOutput(isValidPassword : confirmPasswordPublisher)
+    }
+    
+    struct LoginInfoOutput {
+        let loginInfo: AnyPublisher<LoginInfo, Never>
+    }
+    
+    func sendLoginInfo(from input: Input) -> LoginInfoOutput {
+        let idPublisher = input.idTextField
+        let passwordPublisher = input.passwordTextField
+        
+        let loginInfoPublisher: AnyPublisher<LoginInfo, Never> = Publishers
+            .CombineLatest(idPublisher, passwordPublisher)
+            .map { id, password in
+                if let id = id, let password = password {
+                    return LoginInfo(id: id, password: password)
+                } else {
+                    return LoginInfo(id: "no id", password: "no pw")
+                }
+            }
+            .eraseToAnyPublisher()
+
+        return LoginInfoOutput(loginInfo: loginInfoPublisher)
     }
 }

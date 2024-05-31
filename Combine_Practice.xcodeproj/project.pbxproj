@@ -15,9 +15,21 @@
 		740CF3942BE481AD007EE949 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 740CF3932BE481AD007EE949 /* SnapKit */; };
 		740CF3962BE481AD007EE949 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 740CF3952BE481AD007EE949 /* SnapKit-Dynamic */; };
 		743881242BED8F2600CADB65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881232BED8F2600CADB65 /* LoginView.swift */; };
-		743881262BED8F3C00CADB65 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881252BED8F3C00CADB65 /* LoginViewController.swift */; };
+		743881262BED8F3C00CADB65 /* CarrotLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881252BED8F3C00CADB65 /* CarrotLoginViewController.swift */; };
 		743881282BED8F6600CADB65 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881272BED8F6600CADB65 /* LoginViewModel.swift */; };
+		7438812A2BEDBD9400CADB65 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743881292BEDBD9400CADB65 /* LoginModel.swift */; };
+		7438812C2BEDD13C00CADB65 /* CarrotWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7438812B2BEDD13C00CADB65 /* CarrotWelcomeViewController.swift */; };
+		7438812E2BEDD1D800CADB65 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7438812D2BEDD1D800CADB65 /* WelcomeView.swift */; };
 		7472E6592BE4A389006FA2F8 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7472E6582BE4A389006FA2F8 /* CombineCocoa */; };
+		74B8E4A92C096102006C94AF /* SheetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B8E4A82C096102006C94AF /* SheetLayout.swift */; };
+		74B8E4AC2C09614F006C94AF /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B8E4AB2C09614F006C94AF /* NicknameViewController.swift */; };
+		74B8E4AE2C096163006C94AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B8E4AD2C096163006C94AF /* LoginViewController.swift */; };
+		74B8E4B02C096187006C94AF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B8E4AF2C096187006C94AF /* WelcomeViewController.swift */; };
+		74B8E4B22C096230006C94AF /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B8E4B12C096230006C94AF /* UITextField+Extensions.swift */; };
+		74B8E4B52C096328006C94AF /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B8E4B42C096328006C94AF /* Pretendard-Bold.otf */; };
+		74B8E4B72C096331006C94AF /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B8E4B62C096331006C94AF /* Pretendard-Medium.otf */; };
+		74B8E4B92C09633C006C94AF /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B8E4B82C09633C006C94AF /* Pretendard-SemiBold.otf */; };
+		74B8E4BB2C096360006C94AF /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 74B8E4BA2C096360006C94AF /* Pretendard-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +41,20 @@
 		740CF38A2BE480DC007EE949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		740CF38C2BE480DC007EE949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		743881232BED8F2600CADB65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		743881252BED8F3C00CADB65 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		743881252BED8F3C00CADB65 /* CarrotLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotLoginViewController.swift; sourceTree = "<group>"; };
 		743881272BED8F6600CADB65 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		743881292BEDBD9400CADB65 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		7438812B2BEDD13C00CADB65 /* CarrotWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotWelcomeViewController.swift; sourceTree = "<group>"; };
+		7438812D2BEDD1D800CADB65 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		74B8E4A82C096102006C94AF /* SheetLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetLayout.swift; sourceTree = "<group>"; };
+		74B8E4AB2C09614F006C94AF /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
+		74B8E4AD2C096163006C94AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		74B8E4AF2C096187006C94AF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		74B8E4B12C096230006C94AF /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		74B8E4B42C096328006C94AF /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../../Downloads/Pretendard-1/public/static/Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		74B8E4B62C096331006C94AF /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../Downloads/Pretendard-1/public/static/Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		74B8E4B82C09633C006C94AF /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-SemiBold.otf"; path = "../../../../../Downloads/Pretendard-1/public/static/Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		74B8E4BA2C096360006C94AF /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Regular.otf"; path = "../../../../../Downloads/Pretendard-1/public/static/Pretendard-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +90,12 @@
 		740CF37D2BE480DA007EE949 /* Combine_Practice */ = {
 			isa = PBXGroup;
 			children = (
+				74B8E4B32C096300006C94AF /* Fonts */,
 				740CF37E2BE480DA007EE949 /* AppDelegate.swift */,
+				74B8E4B12C096230006C94AF /* UITextField+Extensions.swift */,
 				740CF3802BE480DA007EE949 /* SceneDelegate.swift */,
-				743881222BED8E9100CADB65 /* Login */,
+				74B8E4AA2C09612A006C94AF /* Tving */,
+				743881222BED8E9100CADB65 /* Carrot */,
 				740CF3842BE480DA007EE949 /* Main.storyboard */,
 				740CF3872BE480DC007EE949 /* Assets.xcassets */,
 				740CF3892BE480DC007EE949 /* LaunchScreen.storyboard */,
@@ -77,14 +104,39 @@
 			path = Combine_Practice;
 			sourceTree = "<group>";
 		};
-		743881222BED8E9100CADB65 /* Login */ = {
+		743881222BED8E9100CADB65 /* Carrot */ = {
 			isa = PBXGroup;
 			children = (
+				7438812D2BEDD1D800CADB65 /* WelcomeView.swift */,
+				7438812B2BEDD13C00CADB65 /* CarrotWelcomeViewController.swift */,
 				743881232BED8F2600CADB65 /* LoginView.swift */,
-				743881252BED8F3C00CADB65 /* LoginViewController.swift */,
+				743881252BED8F3C00CADB65 /* CarrotLoginViewController.swift */,
 				743881272BED8F6600CADB65 /* LoginViewModel.swift */,
+				743881292BEDBD9400CADB65 /* LoginModel.swift */,
 			);
-			path = Login;
+			path = Carrot;
+			sourceTree = "<group>";
+		};
+		74B8E4AA2C09612A006C94AF /* Tving */ = {
+			isa = PBXGroup;
+			children = (
+				74B8E4A82C096102006C94AF /* SheetLayout.swift */,
+				74B8E4AD2C096163006C94AF /* LoginViewController.swift */,
+				74B8E4AF2C096187006C94AF /* WelcomeViewController.swift */,
+				74B8E4AB2C09614F006C94AF /* NicknameViewController.swift */,
+			);
+			path = Tving;
+			sourceTree = "<group>";
+		};
+		74B8E4B32C096300006C94AF /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				74B8E4B82C09633C006C94AF /* Pretendard-SemiBold.otf */,
+				74B8E4B62C096331006C94AF /* Pretendard-Medium.otf */,
+				74B8E4BA2C096360006C94AF /* Pretendard-Regular.otf */,
+				74B8E4B42C096328006C94AF /* Pretendard-Bold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +207,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				740CF38B2BE480DC007EE949 /* LaunchScreen.storyboard in Resources */,
+				74B8E4B72C096331006C94AF /* Pretendard-Medium.otf in Resources */,
+				74B8E4B52C096328006C94AF /* Pretendard-Bold.otf in Resources */,
+				74B8E4B92C09633C006C94AF /* Pretendard-SemiBold.otf in Resources */,
+				74B8E4BB2C096360006C94AF /* Pretendard-Regular.otf in Resources */,
 				740CF3882BE480DC007EE949 /* Assets.xcassets in Resources */,
 				740CF3862BE480DA007EE949 /* Main.storyboard in Resources */,
 			);
@@ -167,11 +223,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				743881262BED8F3C00CADB65 /* LoginViewController.swift in Sources */,
+				74B8E4B22C096230006C94AF /* UITextField+Extensions.swift in Sources */,
+				743881262BED8F3C00CADB65 /* CarrotLoginViewController.swift in Sources */,
+				7438812A2BEDBD9400CADB65 /* LoginModel.swift in Sources */,
 				740CF37F2BE480DA007EE949 /* AppDelegate.swift in Sources */,
+				7438812E2BEDD1D800CADB65 /* WelcomeView.swift in Sources */,
 				743881242BED8F2600CADB65 /* LoginView.swift in Sources */,
 				740CF3812BE480DA007EE949 /* SceneDelegate.swift in Sources */,
+				74B8E4AC2C09614F006C94AF /* NicknameViewController.swift in Sources */,
 				743881282BED8F6600CADB65 /* LoginViewModel.swift in Sources */,
+				7438812C2BEDD13C00CADB65 /* CarrotWelcomeViewController.swift in Sources */,
+				74B8E4B02C096187006C94AF /* WelcomeViewController.swift in Sources */,
+				74B8E4A92C096102006C94AF /* SheetLayout.swift in Sources */,
+				74B8E4AE2C096163006C94AF /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
